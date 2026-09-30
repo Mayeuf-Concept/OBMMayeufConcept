@@ -17,16 +17,16 @@
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Mayeuf Concept","description":"Online Business Manager et assistant virtuel pour TPE, artisans et associations.","url":"https://obm-mayeuf-concept.vercel.app/","email":"mayeufconcept@outlook.com","founder":{"@type":"Person","name":"Laurent Mayeuf"},"address":{"@type":"PostalAddress","addressLocality":"Béthune","addressRegion":"Hauts-de-France","addressCountry":"FR"},"areaServed":"France","sameAs":["https://www.linkedin.com/in/mayeufconcept/"]}
 </script>
 <style>
-:root{--ink:#1c2b3f;--muted:#55627a;--line:#dbe3ec;--soft:#eef3f8;--accent:#0f766e;--accent-d:#0b5a54;--warm:#b4472f;--bg:#fff}
+:root{--ink:#0b1f44;--muted:#4a5a78;--line:#d5e0f0;--soft:#eaf1fb;--accent:#1d4ed8;--accent-d:#0b2a5b;--warm:#c9971c;--gold:#e0b12f;--bg:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;font-family:Manrope,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
 a{color:var(--accent)}
 :focus-visible{outline:3px solid var(--warm);outline-offset:2px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:10}
+header{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:3px solid var(--gold);z-index:10}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
-.logo{font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.logo{font-weight:800;color:var(--accent-d);text-decoration:none;letter-spacing:.02em}
 nav a{margin-left:18px;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
 nav a:hover{color:var(--accent)}
 section{padding:64px 0}
@@ -35,12 +35,19 @@ h2{font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.2;margin:0 0 .5em;font-weigh
 h3{margin:0 0 .3em;font-size:1.15rem}
 p{margin:.6em 0;max-width:68ch}
 .kicker{color:var(--accent-d);font-weight:600;margin:0}
-.btn{display:inline-block;padding:13px 22px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--accent);cursor:pointer;font:inherit;font-weight:700}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;background:linear-gradient(135deg,#0b2a5b,#1d4ed8);color:#fff;font-weight:700;text-decoration:none;border:2px solid var(--accent);cursor:pointer;font:inherit;font-weight:700}
 .btn:hover{background:var(--accent-d);border-color:var(--accent-d)}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:#c9971c;border-color:#c9971c}
 .btn.alt{background:#fff;color:var(--accent-d)}
 .btn.alt:hover{background:var(--soft)}
-.btn.warm{background:var(--warm);border-color:var(--warm)}
-.btn.warm:hover{background:#933a26;border-color:#933a26}
+#accueil{background:linear-gradient(135deg,#0b2a5b 0%,#1d4ed8 65%,#4c8df0 100%);color:#fff}
+#accueil .kicker{color:#f3d27a}
+#accueil .btn{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+#accueil .btn:hover{background:#f3d27a;border-color:#f3d27a}
+#accueil .btn.alt{background:transparent;color:#fff;border-color:#fff}
+#accueil .btn.alt:hover{background:rgba(255,255,255,.15)}
+#accueil .facts,#accueil .facts b{color:#fff}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:15px}
 .facts b{color:var(--ink)}
@@ -53,13 +60,13 @@ ol.steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:22px;grid-te
 ol.steps li{counter-increment:s;border-left:4px solid var(--accent);padding:2px 0 2px 16px}
 ol.steps li::before{content:"Étape " counter(s);display:block;font-weight:800;color:var(--accent-d)}
 .pain{padding-left:20px;max-width:68ch}
-.engage{border:2px solid var(--warm);border-radius:12px;padding:30px;background:#fff}
-.engage h2{color:var(--warm)}
+.engage{border:3px solid var(--gold);border-radius:12px;padding:30px;background:#fff}
+.engage h2{color:var(--accent-d)}
 label{display:block;font-weight:600;margin-top:14px;font-size:15px}
 input,select,textarea{width:100%;padding:11px 12px;border:1px solid #b9c5d3;border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
 .two{display:grid;gap:14px;grid-template-columns:1fr 1fr}
 @media(max-width:600px){.two{grid-template-columns:1fr}nav a{margin:0 14px 0 0}}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:15px}
+footer{border-top:3px solid var(--gold);padding:32px 0;color:var(--muted);font-size:15px}
 footer a{color:var(--muted)}
 .legal{padding:36px 0;font-size:15px;color:var(--muted)}
 .legal h2{font-size:1.2rem;color:var(--ink)}
@@ -165,9 +172,10 @@ footer a{color:var(--muted)}
       <p>En parallèle de Mayeuf Concept, je préside l'Association Bryann (loi 1901), créée après le décès de mon fils Bryann en mars 2025. Elle défend la Loi Bryann, une proposition de loi en 12 articles qui vise à renforcer la sécurité, la transparence et la responsabilité dans les crèches.</p>
       <p>Vous pouvez soutenir ce combat en signant la pétition, en adhérant à l'association ou en faisant un don.</p>
       <div class="actions">
-        <a class="btn warm" href="https://c.org/SsR8pVdVyT" target="_blank" rel="noopener">Signer la pétition</a>
-        <a class="btn warm" href="https://www.helloasso.com/associations/asso-bryann/adhesions/association-bryann" target="_blank" rel="noopener">Adhérer ou faire un don</a>
-        <a class="btn alt" href="https://associationbryann.netlify.app/" target="_blank" rel="noopener">Découvrir la Loi Bryann</a>
+        <a class="btn gold" href="https://c.org/SsR8pVdVyT" target="_blank" rel="noopener">Signer la pétition</a>
+        <a class="btn" href="https://www.helloasso.com/associations/asso-bryann/adhesions/association-bryann" target="_blank" rel="noopener">Adhérer à l'association</a>
+        <a class="btn gold" href="https://www.helloasso.com/associations/asso-bryann/adhesions/association-bryann" target="_blank" rel="noopener">Faire un don</a>
+        <a class="btn alt" href="https://associationbryann.netlify.app/" target="_blank" rel="noopener">Site de l'association</a>
       </div>
     </div>
   </div>
